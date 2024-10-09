@@ -1,3 +1,9 @@
 public class Pass {
-	system.out.println("my name is rudra");
+    public Vehicle vehicle; 
+    public Parking_System parking_System;
+
+    public Pass(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
 }
+
