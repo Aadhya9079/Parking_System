@@ -1,3 +1,8 @@
 public class Pass {
-	system.out.println("my name is rudra");
+    public Vehicle vehicle; 
+
+    public Pass(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
 }
+
