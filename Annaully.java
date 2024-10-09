@@ -1,12 +1,14 @@
 public class Annually extends Pass {
-    private int price;
+    public int price;
+	public String expiry;
 
     public Annually(Vehicle vehicle){
         super(vehicle);
-        this.price = getPrice(vehicle.type);
+        this.price = price(vehicle.type);
+		this.expiry = expiry();
     }
 
-    public int getPrice(String type){
+    public int price(String type){
         switch(type){
             case "cycle":
                 return 500;
@@ -19,7 +21,22 @@ public class Annually extends Pass {
         }
     }
 
-    public int getPrice(){
-        return price;
+    public String expiry(){
+        LocalDateTime instance = LocalDateTime.now();
+
+        LocalDateTime expiryDate = instance.plusYears(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm");
+
+        String formattedString = formatter.format(expiryDate);
+        return formattedString;
+    }
+       
+    public int getPrice() {
+        return price; 
+    }
+
+    public String getExpiry(){
+        return expiry;
     }
 }

@@ -1,12 +1,14 @@
  public class Daily extends Pass {
-    private int price;
+    public int price;
+	public String expiry;
 
     public Daily(Vehicle vehicle) {
         super(vehicle); 
-        this.price = getPrice(vehicle.type); 
+        this.price = price(vehicle.type); 
+		this.expiry = expiry();
     }
 
-    public int getPrice(String type) {
+    public int price(String type) {
         switch (type) {
             case "cycle":
                 return 10;
@@ -18,8 +20,23 @@
                 return 0; 
         }
     }
-       
-    public int getPrice() {
+	
+	public String expiry(){
+        LocalDateTime instance = LocalDateTime.now();
+
+        LocalDateTime expiryDate = instance.plusDays(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm");
+
+        String formattedString = formatter.format(expiryDate);
+        return formattedString;
+    }
+	
+	public String getExpiry(){
+        return expiry;
+    }
+	
+	public int getPrice() {
         return price; 
     }
 }
