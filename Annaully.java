@@ -1,42 +1,12 @@
-public class Annually extends Pass {
-    public int price;
-	public String expiry;
-
-    public Annually(Vehicle vehicle){
+/**
+ * The Annually class calculates the price and expiry of an annual parking pass for a vehicle.
+ * It extends the Daily class to use similar methods and functionality. 
+ * Owner: Arjun Gautam
+ */
+class Annually extends Daily {
+    Annual(Vehicle vehicle) {
         super(vehicle);
-        this.price = price(vehicle.type);
-		this.expiry = expiry();
-    }
-
-    public int price(String type){
-        switch(type){
-            case "cycle":
-                return 500;
-            case "bike":
-                return 2000;
-            case "car":
-                return 5000;
-            default:
-                return 0;
-        }
-    }
-
-    public String expiry(){
-        LocalDateTime instance = LocalDateTime.now();
-
-        LocalDateTime expiryDate = instance.plusYears(1);
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm");
-
-        String formattedString = formatter.format(expiryDate);
-        return formattedString;
-    }
-       
-    public int getPrice() {
-        return price; 
-    }
-
-    public String getExpiry(){
-        return expiry;
+        // Sets the expiry date for an annual pass.
+        this.expiry = calculateExpiry(365);
     }
 }
