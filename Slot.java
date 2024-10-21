@@ -15,9 +15,9 @@
     static int counter = 0;
 
     // Class to hold booking details
-    static class BookingDetails{
+    static class BookingDetails {
         String id;
-
+      
         BookingDetails(String id2) {
             this.id = id2;
         }

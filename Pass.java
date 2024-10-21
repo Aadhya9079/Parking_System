@@ -6,4 +6,3 @@ public class Pass {
         this.vehicle = vehicle;
     }
 }
-
