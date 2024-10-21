@@ -13,6 +13,13 @@ public class Parking_Constant {
     public static final String ENTER_POST = "Enter post: e.g.(student, faculty, other)";
     public static final String INVALID_INPUT_POST = "Invalid input. Please enter student, faculty or other.";
     public static final String ENTER_VALIDITY = "Enter post: e.g.(Daily, Weekly, Monthly, Annually)";
+	
+	public static final String Slot = "Slot ";
+    public static final String Now_Empty = " is now empty.";
+    public static final String Invalid_Slot_Number = "Invalid slot number or the slot is already empty.";
+    public static final String Slot_Occupied = "All slots are occupied.";
+    public static final String Slot_Not_Booked = "No slots are booked.";
+    public static final String Booked_Successfully = " successfully booked.";
     
     // Receipt-related constants
     public static final void receipt(String name, String contact, String userType, String id, String vehicleType, String expiry, int price){
@@ -42,5 +49,24 @@ public class Parking_Constant {
     public static final String RECEIPT_VEHICLE_TYPE = "| Vehicle Type: %-19s |";
     public static final String RECEIPT_COST = "| Cost        : %-19s |";
     public static final String RECEIPT_EXPIRY = "| Expiry      : %-19s |";
+	
+	// Hard coded value of Pass and sub classes
+	public static ENTER_DATE = "Enter the date (1-31): ";
+	public static ENTER_MONTH = "Enter the month (1-12): ";
+	public static ENTER_YEAR = "Enter the year (2024): ";
+	public static ENTER_HRS = "Enter the hour (0-23): ";
+	public static ENTER_MIN = "Enter the minute (0-59): ";
+	public static INVALID_INPUT = "Invalid input Please enter a value between ";
+	public static AND = " and ";
+	public static INVALID_INTEGER = "Invalid input Please enter an integer value.";
+	public static NAME = "Name: ";
+	public static CONTACT = "Conatact: ";
+	public static ROLE = "Role: ";
+	public static VEHICLE_TYPE = "Vehicle type: ";
+	public static PASS_TYPE = "Pass type: ";
+	public static PRICE = "Price: ";
+	public static EXPIRY = "Expiry date: ";
+	public static FORMAT = "%02d-%02d-%d %02d:%02d";
     
+	
 }
