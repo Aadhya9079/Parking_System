@@ -1,4 +1,3 @@
-
 /***
  * Parking System: Manage parking slots and vehicle registrations. Authenticate guards, create users, select vehicle types, and generate parking receipts. Simple interface for efficient parking management.
  * owner: Mayank Aitan
@@ -145,3 +144,4 @@ public class User {
         ;
     }
 }
+

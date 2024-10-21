@@ -14,6 +14,13 @@ public class Parking_Constant {
     public static final String INVALID_INPUT_POST = "Invalid input. Please enter student, faculty or other.";
     public static final String ENTER_VALIDITY = "Enter post: e.g.(Daily, Weekly, Monthly, Annually)";
     
+    public static final String Slot = "Slot ";
+    public static final String Now_Empty = " is now empty.";
+    public static final String Invalid_Slot_Number = "Invalid slot number or the slot is already empty.";
+    public static final String Slot_Occupied = "All slots are occupied.";
+    public static final String Slot_Not_Booked = "No slots are booked.";
+    public static final String Booked_Successfully = " successfully booked.";
+    
     // Receipt-related constants
     public static final void receipt(String name, String contact, String userType, String id, String vehicleType, String expiry, int price){
         String border = "+-----------------------------------+";
