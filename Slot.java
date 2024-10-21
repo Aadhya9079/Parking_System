@@ -8,7 +8,7 @@
  * Date of creation : 09/10/2024
  */
 
-public class Slot{
+ public class Slot{
     static int totalSlots = 100;
     static boolean[] isOccupied = new boolean[totalSlots];
     static BookingDetails[] slotDetails = new BookingDetails[totalSlots];
