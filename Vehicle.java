@@ -11,8 +11,32 @@
  
      protected static String[] vehicleIds = new String[100];
      protected static int vehicleCount = 0;
+     
  
      public abstract void inputVehicleId();
+     public static String type;
+
+    // Method to get the vehicle type
+    public static String selectVehicleType() {
+        System.out.println("Enter the vehicle type (Car/Bike/Cycle): ");
+        type = scanner.nextLine().toLowerCase();  // Convert to lowercase for consistency
+
+        switch (type) {
+            case "car":
+            case "bike":
+            case "cycle":
+                return type; 
+            default:
+                System.out.println("Invalid vehicle type selected. Please try again.");
+                return null; 
+        }
+    }
+
+    // Getter for the vehicle type
+    public static String getVehicleType() {
+        selectVehicleType();
+        return type;
+    }
  
      /**
       * Common validation method for vehicle id
@@ -55,5 +79,4 @@
          String input = name + number;
          return input;
      }
-
  }
